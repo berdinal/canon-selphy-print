@@ -35,7 +35,7 @@
 # (usually http://localhost:631 , Administration / Add Printer menu) while
 # mDNS service discovery is enabled.
 #
-PRINTER="Canon_SELPHY_CP1200"
+PRINTER="Canon_SELPHY_CP1300"
 
 # End of configuration parameters.
 

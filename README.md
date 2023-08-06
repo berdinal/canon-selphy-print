@@ -2,19 +2,31 @@
 Suport for Canon SELPHY CP1200/CP1300 and other compatible printers.
 
 
-#Postcard-size
+# Postcard-size
 
  Print postcard-sized (148x100mm, 5.8 x 3.9in) images
  on a Canon Selphy CP1200 and compatible photo printers
 
  Usage: print-selphy-postcard [--border] <file>
 
-#Requirements
+# Requirements
 
  This script requires ImageMagick, GNU sed and other text processing
  utilities, and CUPS.
 
-#License
+# Configuration parameters:
+
+## Printer name
+ Set Wi-Fi printer name, as seen by CUPS.
+
+ Corresponding printer entry in CUPS configuration should be something like:
+ dnssd://Canon%20SELPHY%20CP1200._ipp._tcp.local/?uuid=<uuid>
+
+ To produce that entry for a new printer, use CUPS printer autodetection
+ (usually http://localhost:631 , Administration / Add Printer menu) while
+ mDNS service discovery is enabled.
+
+# License
 
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -29,19 +41,7 @@ Suport for Canon SELPHY CP1200/CP1300 and other compatible printers.
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#Configuration parameters:
-
-##Printer name
- Set Wi-Fi printer name, as seen by CUPS.
-
- Corresponding printer entry in CUPS configuration should be something like:
- dnssd://Canon%20SELPHY%20CP1200._ipp._tcp.local/?uuid=<uuid>
-
- To produce that entry for a new printer, use CUPS printer autodetection
- (usually http://localhost:631 , Administration / Add Printer menu) while
- mDNS service discovery is enabled.
-
-#Credits
+# Credits
 
  This repo was forked from [abelits/canon-selphy-print](https://github.com/abelits/canon-selphy-print)
 
